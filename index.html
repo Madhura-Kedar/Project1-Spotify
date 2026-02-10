@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="hamburger">
+        <img class="invert" src="hamburger.svg" alt="">
+      </span>
+      <span class="logo"><img class="invert" src="logo.svg" alt="logo" /></span>
+      <span class="home"><img class="invert" src="home.svg" alt="home" /></span>
+      <div class="search" id="searchInput">
+        <img src="search.svg" alt="search" class="search-icon invert" />
+        <input type="text" placeholder="What do you want to play?" /><div class="nav-divider"></div>
+        <img class="invert dabba" src="dabba.svg" alt="dabba">
+      </div>
+
+      <div class="nav-links">
+        <span><a style="color: white; text-decoration: none;" href="https://www.spotify.com/in-en/premium/">Premium</a></span>
+        <span><a style="color: white; text-decoration: none;" href="https://support.spotify.com/in-en/#_gl=1*r2e94u*_gcl_au*MTk3ODc3MDg3LjE3Njg5OTQ2MzM.">Support</a></span>
+        <span><a style="color: white; text-decoration: none;" href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2Fdownload">Download</a></span>
+      </div>
+      <div class="nav-divider"></div>
+      <span class="install"
+        ><img class="invert" src="install.svg" alt="install" /><a href="https://open.spotify.com/download">Install App</a></span
+      >
+      <span class="signup"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</a></span>
+      <button class="Login">Log in</button>
+    </nav>
+    <div class="container flex">
+      <div class="left border flex bg-color rounded">
+        <div class="close">
+          <img class="invert" src="cross.svg" alt="close">
+        </div>
+        <p class="text">Your Library</p>
+        
+        <div class="songlist">
+        <ul>
+
+         </ul>
+        </div>
+        
+        <footer>
+          <div class="footer">
+            <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+            <a href="https://www.spotify.com/in-en/safetyandprivacy/"
+              >Safety &amp; Privacy Center</a
+            >
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+              >Privacy Policy</a
+            >
+            <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+              >Cookies</a
+            >
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+              >About Ads</a
+            >
+            <a href="https://www.spotify.com/in-en/accessibility/"
+              >Accessibility</a
+            >
+          </div>
+        </footer>
+      </div>
+      <div class="right trending flex bg-color rounded"><div class="Spotify-playlist"><h1>Playlists</h1>
+      <div class="card-container">
+      <div class="card" data-folder="songs/tcs/"><div class="img-wrap"><img src=https://i.scdn.co/image/ab67616d00001e028a7ae7092464f6685355dc3c alt="ghr kb aaoge"><div class="play-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M18.89 12.846c-.353 1.343-2.023 2.292-5.364 4.19c-3.23 1.835-4.845 2.752-6.146 2.384a3.25 3.25 0 0 1-1.424-.841C5 17.614 5 15.743 5 12s0-5.614.956-6.579a3.25 3.25 0 0 1 1.424-.84c1.301-.37 2.916.548 6.146 2.383c3.34 1.898 5.011 2.847 5.365 4.19a3.3 3.3 0 0 1 0 1.692"/>
+  </svg>
+</div></div>
+        
+        <h2>Samjhawan</h2>
+        <p>Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Goshal</p>
+      </div>
+     
+        
+      
+      </div>
+</div></div>
+<div class="play-music">
+  <div class="seekbar">
+    <div class="circle">
+
+    </div>
+  </div>
+  <div class="abovebar">
+  <div class="songinfo">
+
+  </div>
+  <div class="songbuttons">
+    <img style="width: 35px;" id="previous" src="previous.svg" alt="">
+    <img style="width: 35px;" id="play" src="play.svg" alt="">
+    <img style="width: 35px;" id="next" src="next.svg" alt="">
+  </div>
+  <div class="timevol">
+  <div class="songtime">
+
+  </div>
+  <div class="volume">
+    <img style="width: 25px;" src="volume.svg" alt="">
+    <div class="range">
+      <input style="cursor: pointer; " type="range" name="volume">
+    </div>
+  </div>
+  </div>
+
+</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

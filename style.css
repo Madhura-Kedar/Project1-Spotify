@@ -1,0 +1,493 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@0,600;1,600&family=Special+Gothic+Expanded+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+     
+}
+html, body{
+  overflow-x: hidden;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    background-color: black;
+    color: white;
+}
+
+.left{
+    width: 25vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+     font-family: serif;
+     padding: 10px;
+     padding-top: 40px;
+     padding-left: 20px;
+     position: relative;
+}
+
+.right{
+    width: 100% ;
+    flex: 1;
+ position: relative;
+  z-index: 1;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 12px 20px;
+    background-color: black;
+}
+.nav-links {
+  display: flex;
+  gap: 18px;
+  margin-left: auto; 
+}
+.nav-links span {
+  color: #b3b3b3;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: bold;
+}
+.nav-links span:hover {
+  color: white;
+}
+.nav-divider {
+  width: 2px;
+  height: 30px;
+  background-color: #b3b3b3;
+  margin: 0 10px;
+}
+.home{
+        background-color: #201f1f;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 60px;
+       height: 60px;
+       border-radius: 30px;
+}
+.home img{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    
+}
+.search img{
+     height: 35px;
+    width: 35px;
+}
+.install{
+    display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+.install img{
+     height: 20px;
+    width: 20px;
+}
+.install a{
+  color: white;
+  text-decoration: none;
+}
+.signup{
+     color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.signup a{
+  color: white;
+  text-decoration: none;
+}
+.signup:hover {
+  color: white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #201f1f;
+    color: white;
+}
+
+
+
+.text{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.footer{
+    padding: 15px;
+    display: flex;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+   
+}
+.footer a{
+    color: gray;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background-color: #242424;   /* Spotify dark */
+  padding: 10px 14px;
+  border-radius: 25px;
+
+  width: 420px;
+  opacity: 0.5;
+}
+.search {
+  opacity: 0.7;
+}
+
+.search:hover,
+.search:focus-within {
+  opacity: 1;
+}
+
+
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: white;
+  font-size: 15px;
+  width: 100%;
+}
+
+.search input::placeholder {
+  color: #b3b3b3;
+}
+.dabba{
+    opacity: 0.5;
+}
+.search-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(1); /* makes icon white */
+}
+.Login{
+    background-color: white;
+    color: black;
+    height: 60px;
+    width: 150px;
+    border-radius: 25px;
+    font-size: 21px;
+}
+.Login:hover{
+  opacity: 0.9; 
+ font-size: 21.5px
+}
+.create-playlist{
+    margin-top: 25px;
+    font-size: 20px;
+    height: 50px;
+    width: 180px;
+    border-radius: 17px;
+    cursor: pointer;
+}
+.create-playlist:hover{
+     opacity: 0.9; 
+    font-size: 20.5px
+}
+.spotify-playlist{
+    position: relative;
+}
+.play-music{
+    position: absolute;
+    bottom: 25px;
+    left: 26vw;
+    padding: 12px;
+    background-color:rgb(184, 179, 179);
+    width: 73%;
+    border-radius: 10px;
+    min-height: 55px;
+    filter: invert(1);
+     z-index: 100;
+     
+  
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+.songbuttons img{
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+.songlist ul{
+  padding: 0px 42px;
+}
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 34px;
+    cursor: pointer;
+    padding: 13px;
+    border: 1px solid white;
+    margin: 12px 0px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+.songlist img{
+  height: 30px;
+  width: 15px;
+}
+.PlayNow{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  white-space: nowrap;   /* 🔥 KEY LINE */
+}
+
+ .PlayNow img {
+  height: 25px;
+  width: 25px;
+}
+
+.songlist .info{
+  font-size: 13px;
+  width: 344px;
+}
+.songlist{
+  height: 544px;
+  overflow:auto;
+  margin-bottom: 44px 0px;
+}
+.hamburger{
+   display: none;
+}
+.seekbar {
+  position: relative;
+  height: 6px;              /* 🔥 clickable height */
+  width: 99%;
+  background-color: black;
+  border-radius: 10px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  pointer-events: none;     /* 🔥 THIS IS CRITICAL */
+}
+
+
+.songtime{
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  min-width: 80px;
+  text-align: right;
+  position: relative;
+  bottom: 1px;
+}
+
+.songname {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+ 
+}
+
+.songlist li {
+  color: #b3b3b3;
+}
+
+.songlist li.active {
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+.abovebar{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px ;
+}
+.timevol{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+.volume{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.songinfo{
+  color: black;
+  padding: 0 12px;
+  width: 250px;
+}
+.songtime{
+width: 125px;
+ color: black;
+  padding: 0 12px;
+}
+
+.logo img{
+  height: 50px;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 70px); /* minus nav */
+}
+.close{
+  display: none;
+}
+.card img{
+    border-radius: 10px;
+    
+width: 100%;
+object-fit: contain;
+
+
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1px;
+     overflow-y: auto;
+     max-height: 70vh;
+     
+}
+.card{
+    margin-top: 25px;
+    width: 300px;
+    
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+    transition: background 0.3s ease;
+
+}
+.card:hover{
+     background: linear-gradient(
+     rgba(0, 0, 0, 0.25),
+     rgba(255, 255, 255, 0.08)
+     );
+    
+}
+.card h2{
+ font-size: 20px;
+ margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+ 
+}
+.card p{
+    margin-top: 20px ;
+    color: #676161;
+}
+
+
+/* make triangle solid black */
+.play-btn svg path {
+  fill: black;
+  stroke: none;
+}
+
+/* size the icon nicely */
+.play-btn svg {
+  width: 25px;
+  height: 25px;
+ 
+}
+.play-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1DB954;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+}
+.card:hover .play-btn {
+  opacity: 1;
+  transform: translateY(0) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+.img-wrap{
+    position: relative;
+}
+/* ===== Scrollbar for Chrome, Edge, Safari ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;   /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;   /* scrollbar color */
+  border-radius: 10px;
+  border: 2px solid #121212; /* spacing effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* hover effect */
+}
+
+/* ===== Scrollbar for Firefox ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a #121212;
+}
+.b-podcasts{
+  margin-top: 25px;
+    font-size: 20px;
+    height: 50px;
+    width: 180px;
+    border-radius: 17px;
+    cursor: pointer;
+}
+.b-podcasts:hover{
+     opacity: 0.9; 
+    font-size: 20.5px
+}
