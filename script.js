@@ -16,14 +16,14 @@ let currentArtist = "Unknown Artist";
 async function GetSongs(folder) {
   currFolder = folder;
 
-  const res = await fetch(`/${folder}/info.json`);
+  const res = await fetch(`${folder}/info.json`);
   const data = await res.json();
 
   currentArtist = data.artist || "Unknown Artist";
 
   return data.songs.map(song => ({
     name: song.replace(/\.mp3$/i, "").replace(/[_-]/g, " "),
-    path: `/${folder}/${encodeURIComponent(song)}`
+    path: `${folder}/${encodeURIComponent(song)}`
   }));
 }
 
@@ -124,7 +124,7 @@ async function displayAlbums() {
   container.innerHTML = "";
 
   for (const album of albums) {
-    const res = await fetch(`/songs/${album}/info.json`);
+    const res = await fetch(`songs/${album}/info.json`);
     const meta = await res.json();
 
     container.innerHTML += `
@@ -196,4 +196,5 @@ async function main() {
 }
 
 main();
+
 
