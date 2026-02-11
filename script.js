@@ -117,7 +117,7 @@ function highlightCurrent() {
 // DISPLAY ALBUMS
 // =======================
 async function displayAlbums() {
-  const albums = ["a3"];
+  const albums = ["a3","a4"];
  // 👈 add more albums here
 
   const container = document.querySelector(".card-container");
@@ -196,6 +196,7 @@ async function main() {
 }
 
 main();
+
 
 
 
