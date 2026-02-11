@@ -130,7 +130,7 @@ async function displayAlbums() {
     container.innerHTML += `
       <div class="card" data-folder="songs/${album}">
         <div class="img-wrap">
-          <img src="/songs/${album}/cover.jpg">
+          <img src="songs/${album}/cover.jpg">
           <div class="play-btn">▶</div>
         </div>
         <h2>${meta.title}</h2>
@@ -196,5 +196,6 @@ async function main() {
 }
 
 main();
+
 
 
