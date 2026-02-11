@@ -23,7 +23,7 @@ async function GetSongs(folder) {
 
   return data.songs.map(song => ({
     name: song.replace(/\.mp3$/i, "").replace(/[_-]/g, " "),
-    path: `${folder}/${encodeURIComponent(song)}`
+    path: `./${folder}/${encodeURIComponent(song)}`
   }));
 }
 
@@ -124,13 +124,13 @@ async function displayAlbums() {
   container.innerHTML = "";
 
   for (const album of albums) {
-    const res = await fetch(`songs/${album}/info.json`);
+    const res = await fetch(`./songs/${album}/info.json`);
     const meta = await res.json();
 
     container.innerHTML += `
       <div class="card" data-folder="songs/${album}">
         <div class="img-wrap">
-          <img src="songs/${album}/cover.jpg">
+          <img src="./songs/${album}/cover.jpg">
           <div class="play-btn">▶</div>
         </div>
         <h2>${meta.title}</h2>
@@ -196,6 +196,7 @@ async function main() {
 }
 
 main();
+
 
 
 
