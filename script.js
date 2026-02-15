@@ -1,8 +1,7 @@
 console.log("javascript loaded");
 
-// =======================
 // GLOBALS
-// =======================
+
 let currentAudio = null;
 let playBtn = null;
 let currentIndex = 0;
@@ -10,9 +9,9 @@ let allSongs = [];
 let currFolder = "";
 let currentArtist = "Unknown Artist";
 
-// =======================
+
 // FETCH SONGS (JSON BASED)
-// =======================
+
 async function GetSongs(folder) {
   currFolder = folder;
 
@@ -27,9 +26,9 @@ async function GetSongs(folder) {
   }));
 }
 
-// =======================
+
 // TIME FORMAT
-// =======================
+
 function formatTime(seconds) {
   if (isNaN(seconds)) return "00:00";
   const mins = Math.floor(seconds / 60);
@@ -37,9 +36,9 @@ function formatTime(seconds) {
   return `${mins}:${secs < 10 ? "0" + secs : secs}`;
 }
 
-// =======================
+
 // PLAY MUSIC
-// =======================
+
 function playMusic(path, name) {
   if (currentAudio) currentAudio.pause();
 
@@ -68,9 +67,8 @@ function playMusic(path, name) {
   currentAudio.play();
 }
 
-// =======================
 // LOAD FOLDER SONGS
-// =======================
+
 async function loadFolder(folder) {
   allSongs = await GetSongs(folder);
   currentIndex = 0;
@@ -104,21 +102,21 @@ async function loadFolder(folder) {
   }
 }
 
-// =======================
+
 // HIGHLIGHT CURRENT
-// =======================
+
 function highlightCurrent() {
   document.querySelectorAll(".songlist li").forEach((li, i) => {
     li.classList.toggle("active", i === currentIndex);
   });
 }
 
-// =======================
+
 // DISPLAY ALBUMS
-// =======================
+
 async function displayAlbums() {
   const albums = ["a3","a4"];
- // 👈 add more albums here
+ //  add more albums here
 
   const container = document.querySelector(".card-container");
   container.innerHTML = "";
@@ -146,12 +144,37 @@ async function displayAlbums() {
   };
 }
 
-// =======================
+
+// HAMBURGER MENU
+
+function initHamburgerMenu() {
+  const hamburger = document.querySelector(".hamburger");
+  const closeBtn = document.querySelector(".close");
+  const leftSidebar = document.querySelector(".left");
+
+  if (hamburger) {
+    hamburger.onclick = () => leftSidebar.classList.add("active");
+  }
+
+  if (closeBtn) {
+    closeBtn.onclick = () => leftSidebar.classList.remove("active");
+  }
+
+  // Close sidebar when a song is clicked
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".songlist li")) {
+      leftSidebar.classList.remove("active");
+    }
+  });
+}
+
+
 // MAIN
-// =======================
+
 async function main() {
   playBtn = document.getElementById("play");
 
+  initHamburgerMenu();
   await displayAlbums();
 
   playBtn.onclick = () => {
@@ -196,8 +219,3 @@ async function main() {
 }
 
 main();
-
-
-
-
-
