@@ -6,13 +6,13 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
-     
 }
+
 html, body{
   overflow-x: hidden;
 }
+
 body{
-    background-color: rgb(255, 255, 255);
     background-color: black;
     color: white;
 }
@@ -31,10 +31,11 @@ body{
 }
 
 .right{
-    width: 100% ;
+    width: 100%;
     flex: 1;
- position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 90px;
 }
 nav{
     display: flex;
@@ -211,19 +212,21 @@ nav{
 .spotify-playlist{
     position: relative;
 }
+
 .play-music{
-    position: absolute;
-    bottom: 25px;
-    left: 26vw;
-    padding: 12px;
-    background-color:rgb(184, 179, 179);
-    width: 73%;
-    border-radius: 10px;
-    min-height: 55px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background-color: rgb(184, 179, 179);
+    width: 100%;
+    border-radius: 0;
+    min-height: 70px;
     filter: invert(1);
-     z-index: 100;
-     
-  
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 .songbuttons{
     display: flex;
@@ -362,7 +365,9 @@ width: 125px;
 .container {
   display: flex;
   width: 100%;
-  height: calc(100vh - 70px); /* minus nav */
+  height: calc(100vh - 70px - 90px);
+  position: relative;
+  z-index: 1;
 }
 .close{
   display: none;
