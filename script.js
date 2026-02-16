@@ -22,7 +22,7 @@ async function GetSongs(folder) {
 
   return data.songs.map(song => ({
     name: song.replace(/\.mp3$/i, "").replace(/[_-]/g, " "),
-    path: `./${folder}/${encodeURIComponent(song)}`
+    path: `${folder}/${encodeURIComponent(song)}`
   }));
 }
 
@@ -219,4 +219,5 @@ async function main() {
 }
 
 main();
+
 
